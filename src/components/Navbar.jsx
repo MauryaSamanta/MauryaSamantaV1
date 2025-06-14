@@ -26,7 +26,7 @@ const Navbar = ({ mode, toggleMode }) => {
       }}
     >
       {/* Left - Your Name */}
-      <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily:'Mulish', cursor:"pointer" }}>
+      <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily:'Mulish', cursor:"pointer", fontSize:"26px" }}>
         {isMobile?"MS":"Maurya Samanta"}
       </Typography>
 
