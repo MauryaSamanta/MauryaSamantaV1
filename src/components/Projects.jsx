@@ -48,8 +48,8 @@ const Projects = () => {
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection:'row',
-        gap: 1,
-        
+         rowGap: 3,
+        columnGap:1,
         justifyContent: 'center',
       }}
     >

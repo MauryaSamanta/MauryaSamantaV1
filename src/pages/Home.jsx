@@ -113,7 +113,7 @@ const Home = () => {
             width: isMobile ? '100%' : '45%',
             display: 'flex',
             //justifyContent: 'flex-start',
-            marginTop: 2,
+           // marginTop: 2,
             marginBottom: 4,
           }}
         >

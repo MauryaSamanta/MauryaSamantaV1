@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
-import { Box, Typography, Chip, Button, Stack } from '@mui/material'
+import { Box, Typography, Chip, Button, Stack, useMediaQuery } from '@mui/material'
 import LaunchIcon from '@mui/icons-material/Launch'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
 const ProjectsBoxes = ({ name, description, image, skills, githubLink, webLink }) => {
-   const [hovered, setHovered] = useState(false)
+   const [hovered, setHovered] = useState(false);
+     const isMobile = useMediaQuery('(max-width:600px)');
   return (
     <Box
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       sx={{
         width: 320,
-        height: 420,
+        height: '100%',
         p:1,
         borderRadius: '10px',
         

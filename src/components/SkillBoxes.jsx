@@ -93,7 +93,7 @@ const SkillBoxes = () => {
             sx={{
               backgroundColor: 'transparent',
               borderRadius: 3,
-              padding: 2,
+              padding: 1,
               boxShadow: 1,
               border: !isMobile && '1px solid rgba(255, 255, 255, 0.34)',
               textAlign: 'center',
@@ -117,8 +117,8 @@ const SkillBoxes = () => {
   src={skill.logoUrl}
   alt={skill.name}
   sx={{
-    width: !isMobile?'30px':'42px',
-    height: !isMobile?'30px':'42px',
+    width: !isMobile?'30px':'40px',
+    height: !isMobile?'30px':'40px',
    
     //marginBottom: 1,
   }}
