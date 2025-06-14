@@ -12,8 +12,8 @@ const ProjectsBoxes = ({ name, description, image, skills, githubLink, webLink }
       onMouseLeave={() => setHovered(false)}
       sx={{
         width: 320,
-        height: '100%',
-        p:1,
+        height: 450,
+        p:"2px",
         borderRadius: '10px',
         
          border:  '0.2px solid rgba(255, 255, 255, 0.2)',
