@@ -98,7 +98,7 @@ const SkillBoxes = () => {
               border: !isMobile && '1px solid rgba(255, 255, 255, 0.34)',
               textAlign: 'center',
               cursor: 'pointer',
-              width: !isMobile?'93px':'30px',
+              width: !isMobile?'88px':'30px',
               height: '42px',
               display: 'flex',
               flexDirection: 'column',

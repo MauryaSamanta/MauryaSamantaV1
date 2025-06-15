@@ -4,7 +4,7 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { Box, useMediaQuery } from '@mui/material'
 import WelcomeAvatar from './WelcomeAvatar'
-
+import marker from "../assets/rec.png"
 // Fix default marker icon
 delete L.Icon.Default.prototype._getIconUrl
 L.Icon.Default.mergeOptions({
@@ -97,14 +97,91 @@ const MapSection = () => {
           url="https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}"
         />
 
-        <Marker position={[position.lat, position.lng]} />
+        <Marker
+  position={[position.lat, position.lng]}
+  icon={L.divIcon({
+    className: '',
+    html: '<div class="leaflet-pulsing-dot"></div>',
+    iconSize: [14, 14],
+    iconAnchor: [7, 7],
+  })}
+/>
+
         <FlyToLocation lat={position.lat} lng={position.lng} />
         {/* Removed FlyToLocation for static zoom */}
       </MapContainer>
+      {/* <Box
+  className="plane-animation"
+  sx={{
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    width: 40,
+    height: 40,
+    zIndex: 1000,
+    fontSize: 30,
+    animation: 'flyPlane 4s ease-in-out forwards',
+    transform: 'rotate(-45deg)', // pointing NW
+  }}
+>
+  ✈️
+</Box> */}
+
       {/* <WelcomeAvatar/> */}
+     <style>
+  {`
+    .leaflet-pulsing-dot {
+      width: 12px;
+      height: 12px;
+      background: #2196f3;
+      border-radius: 50%;
+      box-shadow: 0 0 0 rgba(33, 150, 243, 0.5);
+      animation: pulse 2s infinite;
+      z-index: 200; /* Lower than labels */
+      transform: translateY(6px); /* Move it down a bit to not overlap text */
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.9) translateY(-10px);
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0.5);
+      }
+      70% {
+        transform: scale(1) translateY(-10px);
+        box-shadow: 0 0 0 10px rgba(33, 150, 243, 0);
+      }
+      100% {
+        transform: scale(0.9) translateY(-10px);
+        box-shadow: 0 0 0 0 rgba(33, 150, 243, 0);
+      }
+    }
+
+      @keyframes flyPlane {
+      0% {
+        right: -60px;
+        top: 40px;
+        opacity: 0;
+        transform: rotate(10deg) scale(0.7);
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        right: 50%;
+        top: 80px;
+        transform: rotate(0deg) scale(1);
+        opacity: 0.8;
+      }
+    }
+  `}
+</style>
+
+
     </Box>
+    
   );
 };
+
 
 
 export default MapSection
