@@ -38,6 +38,7 @@ const Blogs = () => {
         display: 'flex',
         flexDirection: 'column',
         //gap: 3,
+        p:2,
         alignItems: 'center',
         mt: 4,
       }}

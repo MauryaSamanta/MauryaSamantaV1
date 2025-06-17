@@ -1,8 +1,9 @@
 import React from 'react'
-import { Box, Typography, Button } from '@mui/material'
+import { Box, Typography, Button, useMediaQuery } from '@mui/material'
 import LaunchIcon from '@mui/icons-material/Launch'
 
 const BlogBoxes = ({ id, name, description, date, link }) => {
+      const isMobile = useMediaQuery('(max-width:600px)');
   return (
     <Box
       sx={{
@@ -22,7 +23,7 @@ const BlogBoxes = ({ id, name, description, date, link }) => {
       }}
     >
       {/* Date at top-right */}
-      <Typography
+     {!isMobile&&( <Typography
         variant="caption"
         sx={{
           color: '#aaa',
@@ -35,7 +36,7 @@ const BlogBoxes = ({ id, name, description, date, link }) => {
       >
         {date}
       </Typography>
-
+)}
       {/* Title */}
       <Typography
         variant="h6"
@@ -57,7 +58,12 @@ const BlogBoxes = ({ id, name, description, date, link }) => {
       </Typography>
 
       {/* Read Blog Button */}
-      <Box mt={2}>
+      <Box mt={2} sx={{
+          mt: 'auto',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
         <Button
           variant="outlined"
           href={link}
@@ -79,6 +85,18 @@ const BlogBoxes = ({ id, name, description, date, link }) => {
         >
           Read Blog
         </Button>
+             {isMobile && (
+          <Typography
+            variant="caption"
+            sx={{
+              color: '#aaa',
+              fontFamily: "'Roboto Slab', serif",
+              fontSize: '11px',
+            }}
+          >
+            {date}
+          </Typography>
+        )}
       </Box>
     </Box>
   )
