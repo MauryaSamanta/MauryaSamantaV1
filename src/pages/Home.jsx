@@ -7,6 +7,7 @@ import WelcomeAvatar from '../components/WelcomeAvatar';
 import SkillBoxes from '../components/SkillBoxes';
 import IntoText from '../components/IntoText';
 import Projects from '../components/Projects';
+import Blogs from '../components/Blogs';
 
 const Home = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -119,6 +120,31 @@ const Home = () => {
         >
           
           <Projects/>
+        </Box>
+       <Box
+          sx={{
+            width: isMobile ? '100%' : '45%',
+            display: 'flex',
+            justifyContent: 'flex-start',
+            marginTop: 2,
+            //marginBottom: 4,
+          }}
+        >
+          <Typography sx={{fontSize:"33px",  fontFamily: "'Roboto Slab', serif", fontWeight:700}}>
+            my blogs
+          </Typography>
+          </Box>
+        <Box
+          sx={{
+            width: isMobile ? '100%' : '45%',
+            display: 'flex',
+            //justifyContent: 'flex-start',
+           // marginTop: 2,
+            marginBottom: 4,
+          }}
+        >
+          
+          <Blogs/>
         </Box>
       </Box>
     </Box>
