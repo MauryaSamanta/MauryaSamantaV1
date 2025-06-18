@@ -7,10 +7,10 @@ const BlogBoxes = ({ id, name, description, date, link }) => {
   return (
     <Box
       sx={{
-        width: '100%',
-        maxWidth: 600,
-        borderBottomRightRadius: id === 4 && '10px',
-        borderBottomLeftRadius: id === 4 && '10px',
+        width: isMobile?'100%':650,
+        //maxWidth: 600,
+        borderBottomRightRadius: id === 2 && '10px',
+        borderBottomLeftRadius: id === 2 && '10px',
         borderTopRightRadius: id === 1 && '10px',
         borderTopLeftRadius: id === 1 && '10px',
         p: 2,

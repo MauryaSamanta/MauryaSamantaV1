@@ -54,9 +54,9 @@ const Projects = () => {
       }}
     >
       {projects.map((project, index) => (
-        <Box key={index} sx={{ flex: '0 1 calc(50% - 16px)' }}>
+       
           <ProjectsBoxes {...project} />
-        </Box>
+        
       ))}
     </Box>
   )

@@ -11,7 +11,7 @@ const ProjectsBoxes = ({ name, description, image, skills, githubLink, webLink }
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       sx={{
-        width: 320,
+        width: isMobile?'100%':330,
         height: 450,
         p:"2px",
         borderRadius: '10px',

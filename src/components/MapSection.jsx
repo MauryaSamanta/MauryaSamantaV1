@@ -25,16 +25,24 @@ const MapSection = () => {
   const [localTime, setLocalTime] = useState('');
   const isMobile = useMediaQuery('(max-width:600px)');
 
-  useEffect(() => {
+useEffect(() => {
+  const updateKolkataTime = () => {
     const now = new Date();
     const options = {
       hour: 'numeric',
       minute: 'numeric',
       hour12: true,
+      timeZone: 'Asia/Kolkata',
       timeZoneName: 'short',
     };
     setLocalTime(now.toLocaleTimeString('en-IN', options));
-  }, []);
+  };
+
+  updateKolkataTime();
+  const interval = setInterval(updateKolkataTime, 60000); // update every minute
+
+  return () => clearInterval(interval);
+}, []);
 
   // Fixed location: Kolkata coords
   const position = { lat: 22.57, lng: 88.36 };
