@@ -137,12 +137,18 @@ const WelcomeAvatar = () => {
        border:'1px solid rgba(91, 112, 156, 0.15)',
     },
   }}
+   onClick={() => window.open('/resume.pdf', '_blank')}
 >
   Resume
 </Button>
-<LinkedInIcon sx={{cursor:'pointer', '&:hover':{color:'#0077B5'}}} onClick={()=>{window.open('https://linkedin.com/in/yourprofile', '_blank');}}/>
-<GitHubIcon sx={{cursor:'pointer'}} onClick={()=>{window.open('https://linkedin.com/in/yourprofile', '_blank');}}/>
-<EmailIcon sx={{cursor:'pointer', '&:hover':{color:'#EA4335'}}} onClick={()=>{window.open('https://linkedin.com/in/yourprofile', '_blank');}}/>
+<LinkedInIcon sx={{cursor:'pointer', '&:hover':{color:'#0077B5'}}} onClick={()=>{window.open('https://www.linkedin.com/in/maurya-samanta-262329287', '_blank');}}/>
+<GitHubIcon sx={{cursor:'pointer'}} onClick={()=>{window.open('https://github.com/MauryaSamanta', '_blank');}}/>
+<EmailIcon
+  sx={{ cursor: 'pointer', '&:hover': { color: '#EA4335' } }}
+  onClick={() => {
+    window.open('mailto:mauryasamanta1508@gmail.com', '_blank');
+  }}
+/>
         </Box>
       </Box>
       {/* Add keyframes for waving hand */}

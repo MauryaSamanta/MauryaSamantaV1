@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import StarBackground from '../components/StarBackground';
 import { Box, Typography, useMediaQuery } from '@mui/material';
 import Navbar from '../components/Navbar';
@@ -11,7 +11,15 @@ import Blogs from '../components/Blogs';
 
 const Home = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
+   const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+  const blogsRef = useRef(null);
 
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <Box sx={{ position: 'relative', width: '100%', minHeight: '100vh', backgroundColor: '#000', overflowX:'hidden',pr:isMobile&&4}}>
       
@@ -44,7 +52,7 @@ const Home = () => {
         }}
       >
       
-  <Navbar />
+  <Navbar scrollToSection={scrollToSection} refs={{ skillsRef, projectsRef, blogsRef }} />
 
 
         <MapSection />
@@ -79,6 +87,7 @@ const Home = () => {
             marginTop: 3,
           //  marginBottom: 4,
           }}
+          ref={skillsRef}
         >
           <Typography sx={{fontSize:"33px",  fontFamily: "'Roboto Slab', serif", fontWeight:700}}>
             my skills
@@ -104,6 +113,7 @@ const Home = () => {
             marginTop: 2,
             marginBottom: 4,
           }}
+          ref={projectsRef}
         >
           <Typography sx={{fontSize:"33px",  fontFamily: "'Roboto Slab', serif", fontWeight:700}}>
             featured projects
@@ -129,6 +139,7 @@ const Home = () => {
             marginTop: 2,
             //marginBottom: 4,
           }}
+          ref={blogsRef}
         >
           <Typography sx={{fontSize:"33px",  fontFamily: "'Roboto Slab', serif", fontWeight:700}}>
             my blogs

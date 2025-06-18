@@ -1,11 +1,11 @@
 import React from 'react'
-import { Box, Typography, IconButton, useTheme } from '@mui/material'
+import { Box, Typography, IconButton, useTheme, Button } from '@mui/material'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { useMediaQuery } from '@mui/material';
 
 
-const Navbar = ({ mode, toggleMode }) => {
+const Navbar = ({ scrollToSection, refs,mode, toggleMode }) => {
   const theme = useTheme()
   const isMobile = useMediaQuery('(max-width:600px)');
   return (
@@ -26,19 +26,127 @@ const Navbar = ({ mode, toggleMode }) => {
       }}
     >
       {/* Left - Your Name */}
-      <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily:'Mulish', cursor:"pointer", fontSize:"26px" }}>
+      <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily: "'Roboto Slab', serif", cursor:"pointer", fontSize:"26px" }}>
         {isMobile?"MS":"Maurya Samanta"}
       </Typography>
+ 
+<Box sx={{ display: 'flex', flexDirection: 'row', gap: 4 }}>
+  <Button
+    onClick={() => scrollToSection(refs.skillsRef)}
+    sx={{
+      fontFamily: "'Roboto Slab', serif",
+      fontSize: '20px',
+      color: 'rgba(255, 255, 255, 0.75)',
+      background: 'none',
+      padding: 0,
+      minWidth: 'unset',
+      textTransform: 'none',
+      border: 'none',
+      boxShadow: 'none',
+      outline: 'none',
+      cursor: 'pointer',
+      '&:hover': {
+        color: '#ffffff',
+        background: 'none',
+        border: 'none',
+        boxShadow: 'none'
+      },
+      '&:focus': {
+        outline: 'none',
+        boxShadow: 'none'
+      },
+      '&:active': {
+        outline: 'none',
+        boxShadow: 'none',
+        border: 'none',
+        background: 'none'
+      },
+      '&:focus-visible': {
+        outline: 'none'
+      }
+    }}
+  >
+    skills
+  </Button>
 
-      {/* Right - Dark / Light mode toggle */}
-      <IconButton
-        onClick={toggleMode}
-        color="inherit"
-        aria-label="toggle dark mode"
-        size="large"
-      >
-        {mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-      </IconButton>
+  <Button
+    onClick={() => scrollToSection(refs.projectsRef)}
+    sx={{
+      fontFamily: "'Roboto Slab', serif",
+      fontSize: '20px',
+      color: 'rgba(255, 255, 255, 0.75)',
+      background: 'none',
+      padding: 0,
+      minWidth: 'unset',
+      textTransform: 'none',
+      border: 'none',
+      boxShadow: 'none',
+      outline: 'none',
+      cursor: 'pointer',
+      '&:hover': {
+        color: '#ffffff',
+        background: 'none',
+        border: 'none',
+        boxShadow: 'none'
+      },
+      '&:focus': {
+        outline: 'none',
+        boxShadow: 'none'
+      },
+      '&:active': {
+        outline: 'none',
+        boxShadow: 'none',
+        border: 'none',
+        background: 'none'
+      },
+      '&:focus-visible': {
+        outline: 'none'
+      }
+    }}
+  >
+    projects
+  </Button>
+
+  <Button
+    onClick={() => scrollToSection(refs.blogsRef)}
+    sx={{
+      fontFamily: "'Roboto Slab', serif",
+      fontSize: '20px',
+      color: 'rgba(255, 255, 255, 0.75)',
+      background: 'none',
+      padding: 0,
+      minWidth: 'unset',
+      textTransform: 'none',
+      border: 'none',
+      boxShadow: 'none',
+      outline: 'none',
+      cursor: 'pointer',
+      '&:hover': {
+        color: '#ffffff',
+        background: 'none',
+        border: 'none',
+        boxShadow: 'none'
+      },
+      '&:focus': {
+        outline: 'none',
+        boxShadow: 'none'
+      },
+      '&:active': {
+        outline: 'none',
+        boxShadow: 'none',
+        border: 'none',
+        background: 'none'
+      },
+      '&:focus-visible': {
+        outline: 'none'
+      }
+    }}
+  >
+    blogs
+  </Button>
+</Box>
+
+     
     </Box>
   )
 }
