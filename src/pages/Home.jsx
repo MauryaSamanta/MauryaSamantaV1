@@ -8,6 +8,7 @@ import SkillBoxes from '../components/SkillBoxes';
 import IntoText from '../components/IntoText';
 import Projects from '../components/Projects';
 import Blogs from '../components/Blogs';
+import ExperienceEducation from '../components/EducationExperience';
 
 const Home = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -68,7 +69,7 @@ const Home = () => {
           <WelcomeAvatar />
         </Box>
 
-        <Box
+        {/* <Box
           sx={{
             width: isMobile ? '100%' : '45%',
             display: 'flex',
@@ -77,8 +78,21 @@ const Home = () => {
           }}
         >
           <IntoText />
-        </Box>
+        </Box> */}
+         
+        
 
+        <Box
+          sx={{
+            width: isMobile ? '100%' : '45%',
+            display: 'flex',
+            justifyContent: 'flex-start',
+            marginTop: 2,
+            marginBottom: 4,
+          }}
+        >
+          <ExperienceEducation />
+        </Box>
         <Box
           sx={{
             width: isMobile ? '100%' : '45%',
