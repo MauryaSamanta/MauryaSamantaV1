@@ -29,7 +29,7 @@ const Navbar = ({ scrollToSection, refs,mode, toggleMode }) => {
       <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily: "'Roboto Slab', serif", cursor:"pointer", fontSize:"26px" }}>
         {isMobile?"MS":"Maurya Samanta"}
       </Typography>
- 
+{/*  
 <Box sx={{ display: 'flex', flexDirection: 'row', gap: 4 }}>
   <Button
     onClick={() => scrollToSection(refs.skillsRef)}
@@ -146,7 +146,7 @@ const Navbar = ({ scrollToSection, refs,mode, toggleMode }) => {
   </Button>
 </Box>
 
-     
+      */}
     </Box>
   )
 }

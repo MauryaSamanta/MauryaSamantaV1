@@ -9,6 +9,7 @@ import IntoText from '../components/IntoText';
 import Projects from '../components/Projects';
 import Blogs from '../components/Blogs';
 import ExperienceEducation from '../components/EducationExperience';
+import BeyondWork from '../components/BeyondWork';
 
 const Home = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
@@ -93,7 +94,35 @@ const Home = () => {
         >
           <ExperienceEducation />
         </Box>
+       
         <Box
+          sx={{
+            width: isMobile ? '100%' : '45%',
+            display: 'flex',
+            justifyContent: 'flex-start',
+            marginTop: 2,
+            marginBottom: 4,
+          }}
+          ref={projectsRef}
+        >
+          <Typography sx={{fontSize:"33px",  fontFamily: "'Roboto Slab', serif", fontWeight:700}}>
+            my side quests
+          </Typography>
+          </Box>
+         <Box
+          sx={{
+            width: isMobile ? '100%' : '45%',
+            display: 'flex',
+            //justifyContent: 'flex-start',
+           // marginTop: 2,
+            marginBottom: 4,
+          }}
+        >
+          
+          <Projects/>
+        </Box>
+
+         <Box
           sx={{
             width: isMobile ? '100%' : '45%',
             display: 'flex',
@@ -118,32 +147,6 @@ const Home = () => {
           }}
         >
           <SkillBoxes />
-        </Box>
-        <Box
-          sx={{
-            width: isMobile ? '100%' : '45%',
-            display: 'flex',
-            justifyContent: 'flex-start',
-            marginTop: 2,
-            marginBottom: 4,
-          }}
-          ref={projectsRef}
-        >
-          <Typography sx={{fontSize:"33px",  fontFamily: "'Roboto Slab', serif", fontWeight:700}}>
-            featured projects
-          </Typography>
-          </Box>
-         <Box
-          sx={{
-            width: isMobile ? '100%' : '45%',
-            display: 'flex',
-            //justifyContent: 'flex-start',
-           // marginTop: 2,
-            marginBottom: 4,
-          }}
-        >
-          
-          <Projects/>
         </Box>
        <Box
           sx={{
@@ -171,6 +174,34 @@ const Home = () => {
           
           <Blogs/>
         </Box>
+         <Box
+          sx={{
+            width: isMobile ? '100%' : '45%',
+            display: 'flex',
+            justifyContent: 'flex-start',
+            marginTop: 2,
+            //marginBottom: 4,
+          }}
+          // ref={blogsRef}
+        >
+          <Typography sx={{fontSize:"33px",  fontFamily: "'Roboto Slab', serif", fontWeight:700}}>
+            beyond work
+          </Typography>
+          </Box>
+          <Box
+          sx={{
+            width: isMobile ? '100%' : '45%',
+            display: 'flex',
+            //justifyContent: 'flex-start',
+           // marginTop: 2,
+            marginBottom: 4,
+          }}
+        >
+          
+          <BeyondWork/>
+        </Box>
+      
+
       </Box>
     </Box>
   );

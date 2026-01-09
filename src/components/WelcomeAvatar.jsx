@@ -50,14 +50,14 @@ const WelcomeAvatar = () => {
       }}
     >
       <Box
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        // onMouseEnter={() => setHovered(true)}
+        // onMouseLeave={() => setHovered(false)}
         sx={{
           position: 'relative',
           width: !isMobile?70:70,
           height: !isMobile?70:70,
            borderRadius: '50%',
-    border: '3px solid grey',
+    // border: '3px solid grey',
     padding: '4px',  // space between avatar and border
     boxSizing: 'border-box',
       display: 'flex',
