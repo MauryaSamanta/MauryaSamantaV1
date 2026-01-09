@@ -3,6 +3,7 @@ import { Box, Typography, IconButton, useTheme, Button } from '@mui/material'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { useMediaQuery } from '@mui/material';
+import PixelRunner from './KnightRunner';
 
 
 const Navbar = ({ scrollToSection, refs,mode, toggleMode }) => {
@@ -17,7 +18,7 @@ const Navbar = ({ scrollToSection, refs,mode, toggleMode }) => {
         px:4,
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         bgcolor: 'transparent',
         color: 'white',
         
@@ -29,6 +30,7 @@ const Navbar = ({ scrollToSection, refs,mode, toggleMode }) => {
       <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily: "'Roboto Slab', serif", cursor:"pointer", fontSize:"26px" }}>
         {isMobile?"MS":"Maurya Samanta"}
       </Typography>
+        <PixelRunner />
 {/*  
 <Box sx={{ display: 'flex', flexDirection: 'row', gap: 4 }}>
   <Button

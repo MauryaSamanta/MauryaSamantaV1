@@ -66,3 +66,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@keyframes run-frames {
+  from { background-position: 0 0; }
+  to { background-position: -480px 0; } /* FRAME_WIDTH × FRAME_COUNT */
+}
+
+@keyframes run-move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(120px);
+  }
+}
