@@ -37,7 +37,7 @@ Raised <b>non-dilutive funding from VentureStudio, Ahmedabad University</b>; par
       </ul>
       <Box sx={{display:'flex', justifyContent:'flex-start', alignItems:'center', flexDirection:'row', gap:2}}> 
         <Button
-  startIcon={<OpenInNewIcon />}
+  // startIcon={<OpenInNewIcon />}
   sx={{
     backgroundColor: 'white',
     color: 'black',
@@ -48,6 +48,7 @@ Raised <b>non-dilutive funding from VentureStudio, Ahmedabad University</b>; par
     '&:hover': {
       backgroundColor: '#eaeaea',
     },
+    
   }}
   href="https://www.shazlo.store/"
   target="_blank"
@@ -56,13 +57,14 @@ Raised <b>non-dilutive funding from VentureStudio, Ahmedabad University</b>; par
   Website
 </Button>
  <Button
-  startIcon={<OpenInNewIcon />}
+  // startIcon={<OpenInNewIcon />}
   sx={{
     backgroundColor: 'white',
     color: 'black',
     borderRadius: 2,
     textTransform: 'none',
     fontWeight: 600,
+    // fontSize:10,
      fontFamily: "'Roboto Slab', serif",
     '&:hover': {
       backgroundColor: '#eaeaea',
@@ -75,7 +77,7 @@ Raised <b>non-dilutive funding from VentureStudio, Ahmedabad University</b>; par
   Play Store
 </Button>
  <Button
-  startIcon={<OpenInNewIcon />}
+  // startIcon={<OpenInNewIcon />}
   sx={{
     backgroundColor: 'white',
     color: 'black',

@@ -14,7 +14,7 @@ const Navbar = ({ scrollToSection, refs,mode, toggleMode }) => {
       sx={{
         width: !isMobile?'45%':'100%',
         height: 64,
-        backdropFilter: 'blur(10px)',  
+        // backdropFilter: 'blur(10px)',  
         px:4,
         display: 'flex',
         alignItems: 'center',
@@ -27,8 +27,8 @@ const Navbar = ({ scrollToSection, refs,mode, toggleMode }) => {
       }}
     >
       {/* Left - Your Name */}
-      <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily: "'Roboto Slab', serif", cursor:"pointer", fontSize:"26px" }}>
-        {isMobile?"MS":"Maurya Samanta"}
+      <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily: "'Roboto Slab', serif", cursor:"pointer", fontSize:"26px", color:'#ffffff89' }}>
+        {isMobile?"MS":"MS"}
       </Typography>
         <PixelRunner />
 {/*  

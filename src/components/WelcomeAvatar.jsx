@@ -37,82 +37,28 @@ const WelcomeAvatar = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
   return (
     <Box
-      sx={{
-        // position: 'absolute',
-        // bottom: 0,
-        // left: 0,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'row',
-        gap: 2,
-        zIndex: 999,
-      }}
-    >
-      <Box
-        // onMouseEnter={() => setHovered(true)}
-        // onMouseLeave={() => setHovered(false)}
-        sx={{
-          position: 'relative',
-          width: !isMobile?70:70,
-          height: !isMobile?70:70,
-           borderRadius: '50%',
-    // border: '3px solid grey',
-    padding: '4px',  // space between avatar and border
-    boxSizing: 'border-box',
-      display: 'flex',
+  sx={{
+    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
-        }}
-      >
-        <Avatar
-          src={images[imageIndex]}
-          alt="profile"
-          sx={{
-            width: !isMobile?60:60,
-            height: !isMobile?60:60,
-             display: 'block',
-           // border: '3px solid grey',
-            transition: '0.3s ease-in-out',
-          }}
-        />
-        {hovered && (
-          <CircularProgress
-            variant="determinate"
-            value={progress}
-            size={!isMobile?66:66}
-            thickness={3}
-            sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              color: 'limegreen',
-              zIndex: 1,
-            }}
-          />
-        )}
-      </Box>
+    justifyContent: 'space-between', // 🔑 forces left / right columns
+    width: '100%',                   // 🔑 prevents squeezing
+    gap: 2,
+   minHeight: !isMobile ? 220 : 120,
+    // zIndex: 999,
+  }}
+>
+      
       <Box sx={{display:'flex', flexDirection: 'column', alignItems: 'flex-start',mt:1}}>
       <Typography
         sx={{
           fontFamily: "'Roboto Slab', serif",
           fontWeight: 600,
           color: 'white',
-          fontSize: !isMobile?'36px':'29px',
+          fontSize: !isMobile?'50px':'29px',
         }}
       >
-        Hi, I'm Maurya{' '}
-        <span
-          role="img"
-          aria-label="wave"
-          style={{
-            display: 'inline-block',
-            animation: 'wave 2s infinite',
-            transformOrigin: '70% 70%',
-          }}
-        >
-          👋
-        </span>
+        Maurya Samanta
       </Typography>
       <Box sx={{ display: 'flex', gap: !isMobile?2:1, mt: 1, flexDirection: 'row', alignItems: 'center' }}>
         <Button
@@ -150,6 +96,38 @@ const WelcomeAvatar = () => {
   }}
 />
         </Box>
+      </Box>
+      <Box
+        // onMouseEnter={() => setHovered(true)}
+        // onMouseLeave={() => setHovered(false)}
+        sx={{
+          position: 'relative',
+          width: !isMobile?70:100,
+          height: !isMobile?70:100,
+          //  borderRadius: '50%',
+    // border: '3px solid grey',
+    padding: '4px',  // space between avatar and border
+    boxSizing: 'border-box',
+      display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+        }}
+      >
+        <Avatar
+          src={images[imageIndex]}
+          alt="profile"
+          variant="square"
+          sx={{
+            width: !isMobile?200:100,
+            height: !isMobile?200:100,
+             display: 'block',
+             borderRadius:!isMobile?10:5,
+           // border: '3px solid grey',
+            transition: '0.3s ease-in-out',
+             transform: 'rotate(8deg)',
+          }}
+        />
+       
       </Box>
       {/* Add keyframes for waving hand */}
       <style>

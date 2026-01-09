@@ -57,7 +57,7 @@ const Home = () => {
   <Navbar scrollToSection={scrollToSection} refs={{ skillsRef, projectsRef, blogsRef }} />
 
 
-        <MapSection />
+        {/* <MapSection /> */}
 
         <Box
           sx={{
