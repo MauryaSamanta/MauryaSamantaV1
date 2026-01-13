@@ -5,6 +5,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
+import { GitHubCalendar } from 'react-github-calendar';
 const WelcomeAvatar = () => {
   const [hovered, setHovered] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -143,6 +144,16 @@ const WelcomeAvatar = () => {
           100% { transform: rotate( 0.0deg) }
         `}
       </style>
+       {/* <GitHubCalendar
+            username="MauryaSamanta"
+            colorScheme="dark"
+            blockSize={6}
+            blockMargin={1}
+            showMonthLabels={false}
+            showTotalCount={false}
+            showColorLegend={false}
+            weeks={isMobile ? 20 : undefined}
+          /> */}
     </Box>
   );
 };

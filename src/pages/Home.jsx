@@ -10,7 +10,7 @@ import Projects from '../components/Projects';
 import Blogs from '../components/Blogs';
 import ExperienceEducation from '../components/EducationExperience';
 import BeyondWork from '../components/BeyondWork';
-
+import {GitHubCalendar} from 'react-github-calendar';
 const Home = () => {
   const isMobile = useMediaQuery('(max-width:600px)');
    const skillsRef = useRef(null);
@@ -51,6 +51,7 @@ const Home = () => {
           justifyContent:'center',
           width: '100%',
           padding: 2,
+           overflowX: 'hidden',
         }}
       >
       
@@ -70,19 +71,7 @@ const Home = () => {
           <WelcomeAvatar />
         </Box>
 
-        {/* <Box
-          sx={{
-            width: isMobile ? '100%' : '45%',
-            display: 'flex',
-            justifyContent: 'flex-start',
-           // marginTop: 1,
-          }}
-        >
-          <IntoText />
-        </Box> */}
-         
-        
-
+  
         <Box
           sx={{
             width: isMobile ? '100%' : '45%',
@@ -93,6 +82,60 @@ const Home = () => {
           }}
         >
           <ExperienceEducation />
+        </Box>
+          <Box
+          sx={{
+            width: isMobile ? '100%' : '45%',
+            display: 'flex',
+            justifyContent: 'flex-start',
+            marginTop: 2,
+            marginBottom: 2,
+          }}
+          ref={projectsRef}
+        >
+          <Typography sx={{fontSize:"33px",  fontFamily: "'Roboto Slab', serif", fontWeight:700}}>
+            my github contributions
+          </Typography>
+          </Box>
+        <Box
+          sx={{
+            width: isMobile ? '100%' : '45%',
+            display: 'flex',
+            alignItems:'center',
+            justifyContent: 'center',
+            marginRight:10,
+            marginLeft:10,
+            marginTop: 2,
+            marginBottom: 4,
+            overflowX:'auto',
+            background: 'rgba(0,0,0,0.55)',
+        borderRadius: 2,
+        paddingTop:2,
+        paddingBottom:2,
+        // p: 2,
+        border: '1px solid rgba(255,255,255,0.08)',
+          }}
+        >
+            
+          {/* <ExperienceEducation /> */}
+          <Box
+            component="img"
+            src="/github_contri.png"
+            // alt={name}
+            sx={{
+              height: '100%',
+              width: '90%',
+              objectFit: 'contain',
+              display: 'block',
+              backgroundColor: 'transparent',
+              borderRadius: '7px',
+              transition: 'transform 0.6s ease',
+              transformOrigin: 'center center',
+                // transform: hovered ? 'scale(1.08) rotateX(5deg) rotateY(-5deg)' : 'none',
+            }}
+          />
+
+          
         </Box>
        
         <Box

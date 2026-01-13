@@ -246,6 +246,16 @@ const ExperienceEducation = () => {
         border: '1px solid rgba(255,255,255,0.08)',
       }}
     >
+       {/* <GitHubCalendar
+            username="MauryaSamanta"
+            colorScheme="dark"
+            blockSize={6}
+            blockMargin={1}
+            showMonthLabels={false}
+            showTotalCount={false}
+            showColorLegend={false}
+            weeks={isMobile ? 20 : undefined}
+          />
       {/* Toggle */}
       <Box
         sx={{
