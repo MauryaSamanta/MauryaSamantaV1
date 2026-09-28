@@ -19,7 +19,28 @@ const tabStyle = (active) => ({
 
 const Work = () => (
   <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-  
+    
+
+
+
+     <Box>
+      <Typography sx={{ fontWeight: 600, fontFamily: "'Roboto Slab', serif", }}>
+        Associate, PwC India
+      </Typography>
+      <Typography sx={{ opacity: 0.6, fontSize: 14 }}>
+        August 2026 – Present
+      </Typography>
+
+      {/* <ul style={{ paddingLeft: 18, marginTop: 8, color:'#ffffffc0', fontFamily: "'Roboto Slab', serif", }}>
+        
+       <li>Explored workflow scheduling algorithms in cloud environments</li>
+        <li>Developed a <b>deadline and reliability-aware workflow scheduling algorithm</b> using Java and tested on real scientific workflows on <b>Amazon Web Services VMs</b>
+</li>
+        <li>Utilized <b>Lagrange multiplier optimization</b> to analytically estimate replications required to achieve desired reliability <b>reducing average cost per workflow by 44%</b>
+ </li>
+      </ul> */}
+   
+    </Box>
     <Box>
       <Typography sx={{ fontWeight: 600, fontFamily: "'Roboto Slab', serif", }}>
         Dept. of CSE, University of Calcutta
@@ -78,6 +99,8 @@ const Work = () => (
 </Button>
 </Box>
     </Box>
+
+
   </Box>
 );
 const Education = () => (
